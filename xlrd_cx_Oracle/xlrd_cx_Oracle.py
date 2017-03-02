@@ -40,7 +40,7 @@ for rx in range(sh.nrows):
     subject_item4 = sh.row(rx)[6].value
     # print(subject_answer)
     print(str(subject_id), subject_type, subject_name, subject_score)
-    cursor.execute(insert_subject2, [subject_id, subject_type, subject_name, subject_score, "", "", "admin", dd, "admin", dd])
+    cursor.execute(insert_subject2, [subject_id, subject_type, subject_name, subject_score, subject_parse, "", "admin", dd, "admin", dd])
     conn.commit()
     cursor.execute(insert_item, [
         item_id1, subject_item1, subject_id])
